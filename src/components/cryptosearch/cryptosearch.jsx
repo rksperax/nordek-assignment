@@ -1,4 +1,4 @@
-import './Cryptosearch.css';
+import './cryptosearch.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectedData, modalToggler,showLoadingMessage } from '../../redux/features/formSlice/formSlice';
 import { useState, useEffect } from 'react';
