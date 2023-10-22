@@ -1,0 +1,123 @@
+.modal_container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.24);
+    z-index: 10;
+}
+
+.search_container {
+    border-radius: 24px;
+    width: 400px;
+    padding: 20px 30px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: linear-gradient(to top, transparent, transparent, #6E56F840);
+    position: relative;
+}
+
+.search_container::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background-color: #0B0819;
+    border-radius: 24px;
+}
+
+.input_search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input_search-container>svg {
+    position: absolute;
+    left: 10px;
+    color: white;
+}
+
+.input_search-container>input {
+    color: #D2D2D2;
+    font-size: 14px;
+    width: 100%;
+    padding: 12px 30px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #6E56F840;
+    background-color: #0B0819;
+}
+
+.input_search-container>input::placeholder {
+    color: #D2D2D2;
+}
+
+.search_list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.search_list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.4s;
+}
+
+.search_list-item>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search_list-item>div>img {
+    height: 24px;
+    width: 24px;
+}
+
+.search_list-item:hover {
+    background-color: #1B192D;
+}
+.active_item{
+    background-color: #1B192D;
+}
+
+
+
+.close_modal-container {
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.close_modal-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+
+
+@media(max-width:450px) {
+    .search_container {
+        width: 350px;
+    }
+  }
